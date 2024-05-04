@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$font: Roboto;
+$light-main-color: white;
+$light-second-color: rgb(186, 185, 185);
+$header-footer-color: rgb(26, 25, 25);
+$details: rgb(37, 37, 37);
+$main-font-color: white;
+$second-font-color: rgb(186, 185, 185);
+$button-color: black;
+$discount-color: rgb(223, 16, 16);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+a {
+    text-decoration: none; // Remove sublinhado
+    color: inherit; // Usa a cor padrão do texto
+    &:hover {
+        text-decoration: none; // Remove sublinhado ao passar o mouse
+        color: inherit; // Mantém a cor padrão ao passar o mouse
+    }
+}
