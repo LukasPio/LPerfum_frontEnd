@@ -1,96 +1,188 @@
-@use '../global' as *;
+@use "../global" as *;
 
 .header {
-    display: flex;
-    min-height: 30vh;
-    width: 100%;
-    justify-content: center;
-    flex-direction: column;
-    background-color: $header-footer-color;
-    color: $main-font-color;
-
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $header-footer-color;
+  color: $main-font-color;
 }
 
 .top-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 17.5vh;
 }
 
 .navbar {
-    display: flex;
-    width: 100%;
-    height: 12.5vh;
-    justify-content: center;
-    align-items: center;
-    gap: 7.5%;
-    font-size: 19px;
-    padding: 1.25rem;
-    text-decoration: none;
-    text-align: center;
+  display: flex;
+  width: 100%;
+  min-height: 12.5vh;
+  justify-content: center;
+  align-items: center;
+  gap: 7.5%;
+  font-size: 19px;
+  padding: 1.25rem;
+  text-decoration: none;
+  text-align: center;
 }
 
 .navbar > a {
-    transition: 0.6s;
-    &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
-    font-weight: 300;
+  transition: 0.6s;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  font-weight: 300;
 }
 
 .brand-image {
-    height: 100px;
-    &:hover {
-        cursor: pointer;
-    }
+  height: 100px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .header-icons {
-    width: 10rem;
-    display: flex;
-    justify-content: space-evenly;
+  width: 10rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.icon, .search-icon {
-    height: 40px;
-    width: 50px;
-    &:hover {
-        cursor: pointer;
-        filter: brightness(0.8);
-        transform: scale(1.05);
-    }
-    transition: 0.6s;
+.icon,
+.search-icon {
+  height: 40px;
+  width: 50px;
+  &:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+    transform: scale(1.05);
+  }
+  transition: 0.6s;
 }
 
 .search-container {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 .search-input {
-    width: 50vw;
-    font-size: 19px;
-    padding: 1rem;
-    border-radius: 6px;
-    border: none;
-    &:focus {
-        outline: none;
-    }
-    font-weight: 300;
+  width: 50vw;
+  font-size: 19px;
+  padding: 1rem;
+  border-radius: 6px;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  font-weight: 300;
 }
 
 @media (max-width: 930px) {
-    .icon, .search-icon {
-        height: 40px;
-        width: 45px;
-    }
-    .navbar {
-        font-size: 15px;
-    }
-    .brand-image {
-        width: 100px;
-        height: auto;
-    }
+  .icon,
+  .search-icon {
+    height: 40px;
+    width: 45px;
+  }
+  .navbar {
+    font-size: 15px;
+  }
+  .brand-image {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    min-height: 7.5vh;
+  }
+
+  .icon,
+  .search-icon {
+    height: 35px;
+    width: 40px;
+  }
+
+  .navbar > a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .brand-image {
+    width: 80px;
+    height: auto;
+  }
+
+  .search-input {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 470px) {
+  .icon,
+  .search-icon {
+    height: 25px;
+    width: 30px;
+  }
+  .search-input {
+    font-size: 12px;
+  }
+  .top-header {
+    min-height: 15vh;
+  }
+  .brand-image {
+    width: 60px;
+    height: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar {
+    min-height: 23.5vh;
+    padding: 0.75rem;
+    font-size: 13.5px;
+  }
+  .icon,
+  .search-icon {
+    height: 20px;
+    width: 25px;
+  }
+  .search-input {
+    font-size: 12px;
+    padding: 0.75rem;
+    width: 45vw;
+  }
+  .top-header {
+    min-height: 15vh;
+  }
+  .brand-image {
+    width: 50px;
+    height: auto;
+  }
+}
+
+@media (max-width: 325px) {
+  .icon,
+  .search-icon {
+    height: 20px;
+    width: 25px;
+  }
+  .search-input {
+    font-size: 12px;
+  }
+  .top-header {
+    min-height: 15vh;
+  }
+  .brand-image {
+    width: 60px;
+    height: auto;
+  }
 }
